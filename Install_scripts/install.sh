@@ -6,22 +6,22 @@ echo "Setting Up the Mac"
 
 if test ! $(which brew); then
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-  echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> $HOME/.zprofile
+  echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >>$HOME/.zprofile
   eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
-git_user(){
-  local name;
-  local email;
+git_user() {
+  local name
+  local email
   local setusername
 
   echo "To Set/Not Set Git Username type true/false"
   read setusername
 
-  if $setusername ; then
-    
+  if $setusername; then
+
     echo "Setting up git Username and Email"
-    echo "Enter Git UserName:";
+    echo "Enter Git UserName:"
     read name
     echo "Enter Git Email:"
     read email
@@ -29,14 +29,14 @@ git_user(){
 
     git config --global user.name "$name"
     git config --global user.email "$email"
-    
+
   else
     echo "Not Setting Git Credentials"
   fi
 }
 
-install_apps(){
-#Installing Brew packages from file
+install_apps() {
+  #Installing Brew packages from file
   echo "Updating existing Packages"
   brew update
 
@@ -49,13 +49,13 @@ install_apps(){
   #Installing packages from App App_Store
   echo "Using mas scripts to install app store packages"
 
-  while read p;do
+  while read p; do
     echo "Installing $p"
     mas lucky "$p"
   done <App_Store.txt
 }
 
-#Install Custom dotfiles 
+#Install Custom dotfiles
 
 #Remaining
 
@@ -65,24 +65,7 @@ install_apps(){
 #Changing Shell
 #Adding/Cloning Dotfiles repo
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #Function Calls
 
 #git_user
 #install_apps
-
