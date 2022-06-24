@@ -45,14 +45,6 @@ install_apps() {
   echo "Performing Brew Cleanup...."
   brew cleanup
   echo "All Packages Installed."
-
-  #Installing packages from App App_Store
-  echo "Using mas scripts to install app store packages"
-
-  while read p; do
-    echo "Installing $p"
-    mas lucky "$p"
-  done <App_Store.txt
 }
 
 #Install Custom dotfiles
