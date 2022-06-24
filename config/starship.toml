@@ -35,8 +35,8 @@ symbol=" "
 style="#cb4b16"
 
 [git_status]
+up_to_date=""
 format="[$all_status ]($style)"
-up_to_date=" "
 style="#6c71c4"
 
 
