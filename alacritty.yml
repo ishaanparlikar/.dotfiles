@@ -117,10 +117,10 @@ font:
       - (macOS) Menlo
       - (Linux/BSD) monospace
       - (Windows) Consolas
-    family: OperatorMonoLig Nerd Font
+    family: Hack Nerd Font
 
     # The `style` can be specified to pick a specific face.
-    style: Book
+    style: Regular
 
   # Bold font face
   #bold:
@@ -1889,7 +1889,7 @@ colors: *solarized_dark
 #   - (Linux/BSD) user login shell
 #   - (Windows) powershell
 shell:
- program: /usr/local/bin/fish
+ program: /bin/zsh
  args:
    - -l
    - -c
