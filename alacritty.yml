@@ -1644,8 +1644,9 @@ colors:
       cyan:    '0x00ffff'
       white:   '0xffffff'
 
-colors: *solarized_dark
+colors: *dracula
   # Default colors
+  # Hello
   #primary:
   #  background: '#1d1f21'
   #  foreground: '#c5c8c6'
